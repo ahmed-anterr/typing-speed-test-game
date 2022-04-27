@@ -78,8 +78,8 @@ startPlaying.onclick = () => {
   submit.style.backgroundColor = "#4caf50";
   creatDiv();
   creatTheWord();
-  time();
   calcScore();
+  time();
 };
 //creating the word ..
 function creatTheWord() {
@@ -105,7 +105,6 @@ function time() {
       timeLeft.innerHTML = myLvlTime.innerHTML;
       theWord.innerHTML = "";
       wordsContainer.innerHTML = "";
-      myInput.value = "";
       creatTheWord();
       creatDiv();
       if (myInput.value === "") {
@@ -123,6 +122,7 @@ function time() {
         resultFunc();
         startPlaying.onclick = () => location.reload();
       }
+      myInput.value = "";
     }
   }, 1000);
 }
