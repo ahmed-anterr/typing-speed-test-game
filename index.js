@@ -102,19 +102,22 @@ function time() {
   let timeCounter = setInterval(() => {
     timeLeft.innerHTML--;
     if (timeLeft.innerHTML <= 0) {
-      submit.click();
-      green();
-      timeLeft.innerHTML = myLvlTime.innerHTML;
-      theWord.innerHTML = "";
-      wordsContainer.innerHTML = "";
-      creatTheWord();
-      creatDiv();
-      if (myInput.value === "") {
+      // green();
+      if (myInput.value.toLowerCase() === theWord.innerHTML.toLowerCase()) {
+        myScore.innerHTML++;
+        theForm.style.cssText = `background-color: rgba(0, 255, 0, 0.1); border-color: #4caf50;`;
+        submit.style.backgroundColor = "#4caf50";
+      } else if (myInput.value === "") {
         theForm.style.cssText = `background-color: rgba(255, 0, 0, 0.1)`;
         submit.style.backgroundColor = "#ff5722";
       } else {
         theForm.style.backgroundColor = "white";
       }
+      timeLeft.innerHTML = myLvlTime.innerHTML;
+      theWord.innerHTML = "";
+      wordsContainer.innerHTML = "";
+      creatTheWord();
+      creatDiv();
       if (words.length === 0) {
         clearInterval(timeCounter);
         theWord.style.display = "none";
