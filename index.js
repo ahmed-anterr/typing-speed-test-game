@@ -102,12 +102,14 @@ function time() {
   let timeCounter = setInterval(() => {
     timeLeft.innerHTML--;
     if (timeLeft.innerHTML <= 0) {
-      // green();
       if (myInput.value.toLowerCase() === theWord.innerHTML.toLowerCase()) {
         myScore.innerHTML++;
         theForm.style.cssText = `background-color: rgba(0, 255, 0, 0.1); border-color: #4caf50;`;
         submit.style.backgroundColor = "#4caf50";
-      } else if (myInput.value === "") {
+      } else if (
+        myInput.value === "" ||
+        myInput.value.toLowerCase() !== theWord.innerHTML.toLowerCase()
+      ) {
         theForm.style.cssText = `background-color: rgba(255, 0, 0, 0.1)`;
         submit.style.backgroundColor = "#ff5722";
       } else {
