@@ -60,7 +60,7 @@ const lvls = {
 // score ..
 totalScore.innerHTML = words.length;
 let defaultLvl = "Normal";
-myLvl.onclick = () => {
+myLvl.onchange = () => {
   defaultLvl = myLvl.value;
   let defaultTime = lvls[defaultLvl];
   myLvlTime.innerHTML = defaultTime;
