@@ -97,7 +97,7 @@ form {
   text-align: center;
   caret-color: var(--main  -color);
   font-size: 20px;
-  color: #4caf50;
+  color: black;
   text-transform: capitalize;
   font-weight: bold;
 }
