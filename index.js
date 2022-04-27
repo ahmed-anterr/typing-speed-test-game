@@ -102,6 +102,8 @@ function time() {
   let timeCounter = setInterval(() => {
     timeLeft.innerHTML--;
     if (timeLeft.innerHTML <= 0) {
+      submit.click();
+      green();
       timeLeft.innerHTML = myLvlTime.innerHTML;
       theWord.innerHTML = "";
       wordsContainer.innerHTML = "";
