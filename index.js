@@ -76,8 +76,8 @@ startPlaying.onclick = () => {
   myInput.focus();
   theForm.style.borderColor = `#4caf50`;
   submit.style.backgroundColor = "#4caf50";
-  creatDiv();
   creatTheWord();
+  creatDiv();
   calcScore();
   time();
 };
