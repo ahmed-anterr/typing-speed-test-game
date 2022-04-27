@@ -72,6 +72,7 @@ myInput.onpaste = () => {
 // main event ..
 startPlaying.onclick = () => {
   startPlaying.style.display = "none";
+  myInput.value = "";
   myInput.focus();
   theForm.style.borderColor = `#4caf50`;
   submit.style.backgroundColor = "#4caf50";
