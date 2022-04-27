@@ -95,9 +95,9 @@ form {
   border: none;
   outline: none;
   text-align: center;
-  caret-color: var(--main-color);
+  caret-color: var(--main  -color);
   font-size: 20px;
-  color: black;
+  color: #4caf50;
   text-transform: capitalize;
   font-weight: bold;
 }
